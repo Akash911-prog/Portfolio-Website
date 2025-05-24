@@ -399,7 +399,7 @@ body {
 .specialization-section h4 {
     color: var(--accent-tertiary);
     font-size: 1.3rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto 2.5rem;
 }
 
 .specialization-grid {
