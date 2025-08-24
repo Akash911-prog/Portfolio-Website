@@ -1,0 +1,32 @@
+.name {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    color: transparent;
+    background: linear-gradient(90deg, hsl(198, 88%, 52%), hsl(228, 76%, 47%), hsl(198, 94%, 33%) 100%);
+    /* text heading color for my name */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+g#menu-icon line {
+    stroke: var(--color-foreground);
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: all 0.3s ease;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hamburger-icon.open svg g#menu-icon #line1 {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.hamburger-icon.open svg g#menu-icon #line3 {
+    transform: translateY(-5.5px) rotate(-45deg);
+}
+
+.hamburger-icon.open svg g#menu-icon #line2 {
+    opacity: 0;
+}
