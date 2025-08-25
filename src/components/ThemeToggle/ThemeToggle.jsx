@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import './ThemeToggle.css'
 
 export default function ThemeToggle({
-    size = 24, //change this to change the icon size
+    className = '',
+    size = 20, //change this to change the icon size
 }) {
     const { theme, setTheme } = useTheme();
     const [clientSize, setClientSize] = useState(size);
@@ -17,7 +18,7 @@ export default function ThemeToggle({
     return (
         <label
             htmlFor="theme-toggle"
-            className="wrapper cursor-pointer"
+            className={`wrapper cursor-pointer ${className}`}
             style={{ "--size": `${clientSize}px` }}
         >
             <input

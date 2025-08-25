@@ -10,6 +10,7 @@
 @theme {
   --default-font-family: var(--font-poppins);
   --color-background: linear-gradient(180deg, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 98%) 100%);
+  --color-background-secondary: white;
   --color-foreground: hsl(0, 0%, 5%);
   --color-secondary-bg: hsl(0, 0%, 85%);
   --color-accent: hsl(181, 61%, 36%);
@@ -24,6 +25,7 @@
 @layer theme {
   .dark {
     --color-background: linear-gradient(180deg, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 11%) 100%);
+    --color-background-secondary: black;
     --color-foreground: hsl(0, 0%, 95%);
     --color-secondary-bg: hsl(0, 0%, 15%);
     --color-accent: hsl(181, 100%, 56%);
@@ -46,7 +48,18 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  overflow-y: scroll;
+  width: min(1400px, 100vw);
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }

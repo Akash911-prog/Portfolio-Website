@@ -9,19 +9,18 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className='flex items-center justify-between px-2'>
-            <div className="name text-2xl m-2 font-bold">Akash Samanta</div>
+        <div className='flex items-center justify-between px-2 border-b border-glass/10 fixed top-0 left-0 w-full bg-background-secondary'>
+            <a href="/" className="name text-2xl m-2 font-bold">Akash Samanta</a>
             <nav className="links hidden sm:flex justify-between gap-4 bg-glass/10 border-b border-glass/10 px-3 py-1 rounded-xl mt-1 ">
-                <span className='links-items'>About</span>
-                <span className='links-items'>Experience</span>
-                <span className='links-items'>Projects</span>
-                <span className='links-items'>Contact</span>
-                <ThemeToggle />
+                <a href='#experience' className='link-items'>Experience</a>
+                <a href='#projects' className='link-items'>Projects</a>
+                <a href='#contact' className='link-items'>Contact</a>
+                <ThemeToggle className='p-2' />
             </nav>
 
             <div className="btns flex gap-3 sm:hidden">
 
-                <ThemeToggle size={24} />
+                <ThemeToggle className='' size={20} />
 
                 <button className={`hamburger-icon cursor-pointer z-10 ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
                     <svg className='cursor-pointer' width="24" height="24" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">

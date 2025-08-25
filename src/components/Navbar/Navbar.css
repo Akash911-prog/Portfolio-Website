@@ -12,6 +12,41 @@
     animation: fadeIn 1s ease forwards;
 }
 
+.link-items {
+    padding: 0.5rem;
+    position: relative;
+}
+
+.link-items:hover {
+    background: linear-gradient(90deg, hsl(198, 88%, 52%), hsl(228, 88%, 54%), hsl(198, 94%, 33%) 100%);
+    /* text heading color for my name */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    mix-blend-mode: difference;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+
+.link-items::after {
+    content: "";
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(198, 88%, 52%), hsl(228, 88%, 54%), hsl(198, 94%, 33%) 100%);
+    mix-blend-mode: difference;
+    cursor: pointer;
+    transition: width 0.4s ease;
+}
+
+.link-items:hover::after {
+    width: 100%;
+}
+
 g#menu-icon line {
     stroke: var(--color-foreground);
     transform-box: fill-box;
