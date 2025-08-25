@@ -7,6 +7,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    mix-blend-mode: difference;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease forwards;
 }
 
 g#menu-icon line {
@@ -29,4 +32,25 @@ g#menu-icon line {
 
 .hamburger-icon.open svg g#menu-icon #line2 {
     opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        background-size: 0% 100%;
+        /* starts collapsed */
+        opacity: 0;
+    }
+
+    50% {
+        background-size: 100% 100%;
+        /* expand to fit text */
+        opacity: 1;
+    }
+
+    100% {
+        background-size: 100% 100%;
+        /* overshoot for smooth feel */
+        background-position: 0 0;
+        /* optional pan effect */
+    }
 }

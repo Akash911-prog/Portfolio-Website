@@ -2,6 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --color-toggle-light: yellow;
+  --color-toggle-dark: bisque;
+}
+
 @theme {
   --default-font-family: var(--font-poppins);
   --color-background: linear-gradient(180deg, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 98%) 100%);
@@ -10,6 +15,7 @@
   --color-accent: hsl(181, 61%, 36%);
   --color-accent-secondary: hsl(1, 61%, 36%);
   --color-muted: hsl(0, 0%, 50%);
+  --color-glass: hsl(0, 0%, 0%);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-poppins: var(--font-poppins);
@@ -23,6 +29,7 @@
     --color-accent: hsl(181, 100%, 56%);
     --color-accent-secondary: hsl(1, 97%, 57%);
     --color-muted: hsl(0, 0%, 50%);
+    --color-glass: hsl(0, 0%, 100%);
   }
 }
 
