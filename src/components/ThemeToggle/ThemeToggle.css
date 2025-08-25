@@ -1,0 +1,24 @@
+.wrapper div.icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: red;
+    transition: all 0.3s ease;
+}
+
+.wrapper input:checked+div.icon {
+    background-color: #eeeeee;
+    transform: scale(1.2);
+}
+
+.wrapper input:checked+div.icon::before {
+    content: "";
+    position: absolute;
+    top: -0.4rem;
+    left: 0.3rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--color-background);
+    transition: all 0.3s ease;
+}

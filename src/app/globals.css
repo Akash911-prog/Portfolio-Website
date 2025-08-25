@@ -26,12 +26,12 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: linear-gradient(180deg, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 11%) 100%);
     --color-foreground: hsl(0, 0%, 95%);
   }
-}
+} */
 
 /* Can be used to make theme automatic */
 
